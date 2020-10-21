@@ -1,0 +1,151 @@
+#top{
+  margin-right: -15px;
+  margin-left: -15px;
+  min-height: 700px;
+  background-image: url('../img/background.png');
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+  background-size: cover;
+}
+nav.navbar{
+  transition: top .35s ease-out;
+}
+#top-text{
+  font-size: 2.5rem;
+  font-weight: 300;
+  line-height: 1.25;
+
+  text-shadow: 2px 2px #000;
+}
+#astronauta{
+  position: absolute;
+  top: 40%;
+  right: 20%;
+  -webkit-animation: astronauta 4s linear 0s infinite;
+  animation: astronauta 4s linear 0s infinite;
+}
+#opening{
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code{
+  position: relative;
+}
+.clipboard code{
+  border-radius: .25rem 0 0 .25rem;
+  text-align: center;
+}
+.clipboard button{
+  border-radius: 0 .25rem .25rem 0;
+}
+
+#cdn-js code{
+  border-radius: .25rem 0 0 0;
+}
+#cdn-js button{
+  border-radius: 0 .25rem 0 0;
+}
+#cdn-css code{
+  border-radius: 0 0 0 .25rem;
+}
+#cdn-css button{
+  border-radius: 0 0 .25rem 0;
+}
+
+#piece-blue,
+#piece-yellow{
+  display: flex;
+  align-self: start;
+  margin: 0 10px;
+}
+#piece-yellow{
+  width: 80px;
+}
+#piece-blue{
+  height: 80px;
+}
+#footer{
+  padding: 15px 0;
+  margin-top: 15px;
+}
+#examples .example-item{
+  padding: 4rem .5rem;
+  text-align: center;
+}
+#back-to-top{
+  display: none;
+  position: fixed;
+  z-index: 1040;
+  right: -3rem;
+  bottom: 1rem;
+  width: 50px;
+  height: 50px;
+  opacity: .7;
+  font-size: 2rem;
+  padding: .5rem;
+  text-align: center;
+
+  -webkit-user-select: none;
+
+  -moz-user-select: none;
+
+  -ms-user-select: none;
+
+  user-select: none;
+  cursor: pointer;
+
+  border-radius: 50%;
+  transition: ease-out .35s;
+}
+#back-to-top:hover{
+  opacity: 1;
+}
+
+@media(min-width: 768px){
+  #top-text{
+    font-size: 3.25rem;
+    min-height: 220px;
+  }
+  #piece-yellow{
+    width: 160px;
+    height: auto;
+  }
+  #piece-blue{
+    height: 160px;
+    width: auto;
+  }
+}
+#example-form  .form-control{
+  margin: .5rem .1rem;
+}
+
+@-webkit-keyframes astronauta{
+    0.0%{
+        transform: translate(0px, 0px);
+    }
+    100%{
+        transform: translate(0px, 0px);
+    }
+    40.3%{
+        transform: translate(0px, -18px);
+    }
+    89.6%{
+        transform: translate(0px, 5px);
+    }
+}
+
+@keyframes astronauta{
+    0.0%{
+        transform: translate(0px, 0px);
+    }
+    100%{
+        transform: translate(0px, 0px);
+    }
+    40.3%{
+        transform: translate(0px, -18px);
+    }
+    89.6%{
+        transform: translate(0px, 5px);
+    }
+}

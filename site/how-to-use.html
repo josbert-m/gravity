@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to use | gravity</title>  
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Link Stylesheet -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/fontawesome.min.css">
+  <link rel="stylesheet" href="../dist/css/gravity.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body id="body-how-to-use">
+
+  <!-- Navbar -->
+  <nav class="navbar fixed-top navbar-expand navbar-dark bg-primary" id="navbar">
+    <div class="container-xl">
+      <a class="mx-4 my-1" href="#"><img src="img/logo-white.png" alt="logo" height="30"></a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="how-to-use.html" class="nav-link active">How to use</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Main Page -->
+  <div class="container pt-5" id="main">
+    <div class="row py-3 my-3" id="instalation">
+      <div class="col-12 col-md-10 mx-md-auto px-sm-5">
+        <h1 class="pb-3 border-bottom">Instalation <a href="#instalation" class="fas fa-hashtag text-secondary"></a></h1>
+        <p>
+          Install through your package manager as npm or yarn, or use it through <a href="index.html#opening">CDN</a>, you can also <a href="https://github.com/josbert-m/gravity/archive/main.zip">download the package</a> in zip
+        </p>
+        <pre class="py-3 bg-dark text-primary rounded">
+          <b class="text-white">#npm</b>
+          npm install gravity-library
+
+          <b class="text-white">#yarn</b>
+          yarn add gravity-library</pre>
+      </div>
+    </div>
+    <div class="row py-3 my-3" id="usage">
+      <div class="col-12 col-md-10 mx-md-auto px-sm-5">
+        <h1 class="pb-3 border-bottom">Usage <a href="#usage" class="fas fa-hashtag text-secondary"></a></h1>
+        <p>
+          Add gravity.js, and gravity.js or another CSS animation library if you prefer
+        </p>
+        <pre class="py-3 bg-dark text-white rounded">
+          &#60;link rel="stylesheet" href="css/gravity.css"&#62;
+          ...
+          &#60;script src="js/gravity.js">&#60;/script&#62;</pre>
+      </div>
+      <div class="col-12 col-md-10 mx-md-auto px-sm-5" id="using-in-html">
+        <h2 class="py-3 h3">Using in html <a href="#using-in-html" class="fas fa-hashtag text-secondary"></a></h2>
+        <p>
+          gravity has by default an instantiated object for its use, 
+          directly in the html you can activate the animations using the class name <i>gravity</i>
+        </p>
+        <pre class="py-3 bg-dark text-white rounded">
+          &#60;div class="gravity"> This will be revealed &#60;/div&#62;</pre>
+        <p>
+          You can control the animation time and other options by the following attributes on the element:
+        </p>
+        <ul class="list-group mb-3">
+          <li class="list-group-item"><b>data-gravity-animation:</b> Name of the animation or keyframes to use</li>
+          <li class="list-group-item"><b>data-gravity-duration:</b> Animation time, in milliseconds</li>
+          <li class="list-group-item"><b>data-gravity-delay:</b> Animation delay, in milliseconds</li>
+          <li class="list-group-item"><b>data-gravity-in:</b> Distance in pixels required to start the reveal (relative to the top and bottom of the viewport), 
+            the element will not be revealed until the top of the viewport is beyond what is set</li>
+        </ul>
+      </div>
+      <div class="col-12 col-md-10 mx-md-auto px-sm-5" id="using-with-javascript">
+        <h2 class="py-3 h3">Using with Javascript <a href="#using-with-javascript" class="fas fa-hashtag text-secondary"></a></h2>
+        <p>
+          Using javascript you can instantiate a new object of the Gravity Class
+        </p>
+        <pre class="py-3 bg-dark text-white rounded">
+          <i class="text-info">var</i> revealed = <i class="text-info">new</i> Gravity(<i class="text-warning">element</i>, <i class="text-warning">removeClassName</i>);
+          revealed.ready(<i class="text-warning">options</i>);</pre>
+        <table class="table table-striped my-3">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Description</th>
+              <th>Type</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><i>element</i></td>
+              <td>CSS selector, of the elements to animate</td>
+              <td>string</td>
+            </tr>
+            <tr>
+              <td><i>removeClassName</i></td>
+              <td>If true, the class name passed to the <i>element</i> parameter will be removed once the animation starts.<br>
+              In case of having passed an id, the class name that is exactly equal to the id will be eliminated</td>
+              <td>boolean</td>
+            </tr>
+            <tr>
+              <td><i>options</i></td>
+              <td>Animation options: animation, duration, delay and offset</td>
+              <td>object</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-12 col-md-10 mx-md-auto px-sm-5" id="default-options">
+        <h2 class="h3 py-3">Default options <a href="#desfault-options" class="fas fa-hashtag text-secondary"></a></h2>
+        <p>
+          If the animation parameters are not configured, through the <i>data-gravity-*</i> attributes or the <i>options</i> parameter,
+           the following default values will be taken
+        </p>
+        <table class="table table-striped my-3">
+          <thead>
+            <tr>
+              <th>Option</th>
+              <th>Description</th>
+              <th>Default</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><i>animation</i></td>
+              <td>Name of the animation or keyframes to use</td>
+              <td>upward</td>
+            </tr>
+            <tr>
+              <td>duration</td>
+              <td>Animation time, in milliseconds</td>
+              <td>700</td>
+            </tr>
+            <tr>
+              <td>delay</td>
+              <td>Animation delay, in milliseconds</td>
+              <td>50</td>
+            </tr>
+            <tr>
+              <td>offset</td>
+              <td>Distance in pixels required to start the reveal (relative to the top and bottom of the viewport)</td>
+              <td>It is not an absolute value, it will always be one fifth of the height of the user's viewport</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="my-5 border p-2">
+          <span class="fas fa-info-circle text-warning"></span> The configuration values will have a certain order of importance, 
+          the value of the data-gravity attributes will always be taken first and if they do not exist, 
+          those of the options parameter will be taken. Finally obviously the default values
+        </p>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="fas fa-angle-up bg-dark text-light" id="back-to-top"></div>
+  <!-- Footer -->
+  <footer id="footer" class="bg-dark text-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="d-inline-block mr-md-0">  
+            <span class="my-2 lead">Gravity made with <span class="fas fa-heart text-danger"></span> by Josbert Muria</span>
+          </div>
+          <div class="d-inline-block float-sm-right">
+            <a href="" class="text-light lead"><span>Github</span> <span class="fab fa-github"></span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- scripts -->
+  <script src="js/jquery/jquery.min.js"></script>
+  <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="js/clipboard/clipboard.min.js"></script>
+  <script src="../dist/js/gravity.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

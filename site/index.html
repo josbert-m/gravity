@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta Data -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Home | gravity</title>
+  <!-- Link Stylesheet -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/fontawesome.min.css">
+  <link rel="stylesheet" href="../dist/css/gravity.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <div class="container-fluid">
+    <div id="top">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand navbar-dark bg-primary" id="navbar">
+        <div class="container-xl">
+          <a class="mx-4 my-1" href="index.html"><img src="img/logo-white.png" alt="logo" height="30"></a>
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a href="index.html" class="nav-link">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="how-to-use.html" class="nav-link">How to use</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+  
+      <div class="container">
+        <div class="row mt-3 pt-md-5 pb-2">
+          <div class="col-12 col-md-8 px-3 pr-md-2 py-4">
+            <h1 class="text-white text-wrap gravity" data-gravity-delay="300" data-gravity-in="0" id="top-text"><b class="text-primary">Gravity </b>reveal elements when entering the viewport <br>
+            with CSS animations.</h1>
+          </div>
+          <div class="col-12 col-md-4">
+            <img src="img/astronauta.png" alt="astronauta" height="220" id="astronauta" class="d-none d-md-block">
+          </div>
+        </div>
+    
+        <div class="row pt-3">
+          <div class="col-8 col-md-6 offset-2 offset-md-3 d-flex justify-content-center mt-md-3 flex-wrap flex-sm-nowrap">
+            <a href="#opening" class="btn btn-primary btn-block btn-lg m-2">Get now</a>
+            <a href="#examples-section" class="btn btn-primary btn-block btn-lg m-2">Examples</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Main Page -->
+    <div class="container pt-5">
+      
+      <div class="row align-items-center mt-3 mb-5 px-3 py-4 bg-dark shadow rounded-lg gravity" id="opening" data-gravity-animation="ghost">
+        <div class="col-12 col-md-7 order-md-2 px-3">
+          <p class="text-light">gravity is a library to animate DOM elements as soon as they enter 
+            the window and are visible to the user. 
+            This library is similar and is inspired by <a href="https://Wowjs.uk">Wow.js</a>
+            <br><br>
+            Easy to use, fast and configurable
+          </p>
+        </div>
+        <div class="col-12 col-md-5" id="rocket" style="animation-duration: 700ms; animation-delay: 0">
+          <img src="img/rocket.png" alt="rocket" width="120px" class="mx-auto my-3 d-block">
+        </div>
+      </div>
+  
+      <div class="row pt-4 border-bottom pb-5 align-items-center flex-md-nowrap" id="get-now">
+        <div class="col-12 col-md-6 mb-3 mb-md-0 gravity" data-gravity-animation="ghost">
+          <h2 class="text-primary h1">Instalation <span class="text-secondary fas fa-cloud-download-alt"></span></h2>
+          <p class="lead">Install now in your project, through npm or yarn, 
+            or download the source code in a ".zip"</p>  
+        </div>
+        <div class="col-12 col-md-6 px-4 pt-3 ml-md-3 gravity" data-gravity-animation="ghost">
+          <div class="clipboard d-flex mb-3">
+            <code class="py-2 px-4 bg-dark border-left-0 w-100"><b class="text-light">#npm </b> npm install gravity-library</code>
+            <button data-toggle="tooltip" title="copy to clipboard" type="button" data-clipboard-text="npm install gravity-library" class="btn btn-primary border-right-0"><span class="fas fa-paperclip"></span></button>
+          </div>
+          <div class="clipboard d-flex mb-3">
+            <code class="py-2 px-4 bg-dark border-left-0 w-100"><b class="text-light">#yarn </b> yarn add gravity-library</code>
+            <button data-toggle="tooltip" title="copy to clipboard" type="button" data-clipboard-text="yarn add gravity-library" class="btn btn-primary border-right-0"><span class="fas fa-paperclip"></span></button>
+          </div>
+          <div class="clipboard d-flex" id="cdn-js">
+            <code class="py-2 px-4 bg-dark border-left-0 w-100"><b class="text-light">#cdnJS </b> https://cdn.jsdelivr.net/npm...</code>
+            <button data-toggle="tooltip" title="copy to clipboard" type="button" data-clipboard-text="https://cdn.jsdelivr.net/npm/gravity-library@1.0.0-beta1/dist/js/gravity.min.js" class="btn btn-primary border-right-0"><span class="fas fa-paperclip"></span></button>
+          </div>
+          <div class="clipboard d-flex mb-3" id="cdn-css">
+            <code class="py-2 px-4 bg-dark border-left-0 w-100"><b class="text-light">#cdnCSS </b> https://cdn.jsdelivr.net/npm...</code>
+            <button data-toggle="tooltip" title="copy to clipboard" type="button" data-clipboard-text="https://cdn.jsdelivr.net/npm/gravity-library@1.0.0-beta1/dist/css/gravity.min.css" class="btn btn-primary border-right-0"><span class="fas fa-paperclip"></span></button>
+          </div>
+          <div class="clipboard d-flex mb-3">
+            <a href="https://github.com/josbert-m/gravity/archive/main.zip" type="button" class="btn mx-auto px-5 btn-primary border-right-0">Download  <span class="fas fa-arrow-down"></span></a>
+          </div> 
+        </div>
+      </div>
+  
+      <div class="row mt-5 py-3 border-bottom">
+        <div class="col-12 col-md-7 pt-5 pb-3 d-flex justify-content-center">
+          <div id="piece-yellow" class="gravity" data-gravity-animation="right">
+            <object data="img/piece-yellow.svg" type="image/svg+xml" width="100%">
+              <img src="img/piece-yellow.svg" alt="gravity.js">
+            </object>
+          </div>
+          <div id="piece-blue" class="gravity" data-gravity-animation="left">
+            <object data="img/piece-blue.svg" type="image/svg+xml" height="100%">
+              <img src="img/piece-blue.svg" alt="gravity.js">
+            </object>
+          </div>
+        </div>
+        <div class="col-12 col-md-5 d-flex align-items-center gravity" data-gravity-animation="ghost">
+          <div class="d-flex flex-column">
+            <p>
+              Is made up of a base library (gravity.js) and a css animation library (gravity.css) although you can use any other animation library if you wish.
+            </p>
+            <p>
+              <i>gravity.min.js</i> <b class="text-secondary">2,9Kb</b> + <i>gravity.min.css</i> <b class="text-secondary">3,3Kb</b> = <b class="text-secondary">6,2Kb!!</b>
+            </p>
+          </div>
+        </div> 
+      </div>
+      <div class="row my-3 pt-5" id="examples-section">
+        <h1 class="text-primary">
+          Examples
+        </h1>
+        <div class="col-12 col-md-6 offset-md-6 p-3 shadow">
+          <div class="form-row" id="example-form">
+            <div class="col-12">
+              <select name="animation" id="example-animation" class="form-control">
+                <option value="upward">upward</option>
+                <option value="downward">downward</option>
+                <option value="rightward">rightward</option>
+                <option value="leftward">leftward</option>
+                <option value="ghost">ghost</option>
+                <option value="run">run</option>
+                <option value="arrow">arrow</option>
+                <option value="up">up</option>
+                <option value="down">down</option>
+                <option value="left">left</option>
+                <option value="right">right</option>
+              </select>
+            </div>
+            <div class="col-6">  
+              <input type="number" required="required" name="duration" placeholder="Duration" id="example-duration" class="form-control">
+            </div>
+            <div class="col-6">
+              <input type="number" required="required" name="delay" id="example-delay" placeholder="Delay" class="form-control">
+            </div>
+            <div class="col-6 offset-6">
+              <button class="btn btn-primary btn-block" type="button" id="example-start">Start</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="row my-5 mx-auto" id="examples">
+        <div class="col-12 col-md-4 p-3">
+          <div class="example-item bg-secondary rounded">
+            <i class="text-light h1">Element</i>
+          </div>
+        </div>
+        <div class="col-12 col-md-4 p-3">
+          <div class="example-item bg-secondary rounded">
+            <i class="text-light h1">Element</i>
+          </div>
+        </div>
+        <div class="col-12 col-md-4 p-3">
+          <div class="example-item bg-secondary rounded">
+            <i class="text-light h1">Element</i>
+          </div>
+        </div>
+        <div class="col-12 col-md-4 p-3">
+          <div class="example-item bg-secondary rounded">
+            <i class="text-light h1">Element</i>
+          </div>
+        </div>
+        <div class="col-12 col-md-4 p-3">
+          <div class="example-item d-none d-md-block bg-secondary rounded">
+            <i class="text-light h1">Element</i>
+          </div>
+        </div>
+        <div class="col-12 col-md-4 p-3">
+          <div class="example-item d-none d-md-block bg-secondary rounded">
+            <i class="text-light h1">Element</i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="fas fa-angle-up bg-dark text-light" id="back-to-top"></div>
+  <!-- Footer -->
+  <footer id="footer" class="bg-dark text-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="d-inline-block mr-md-0">  
+            <span class="my-2 lead">Gravity made with <span class="fas fa-heart text-danger"></span> by Josbert Muria</span>
+          </div>
+          <div class="d-inline-block float-sm-right">
+            <a href="" class="text-light lead"><span>Github</span> <span class="fab fa-github"></span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- scripts -->
+  <script src="js/jquery/jquery.min.js"></script>
+  <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="js/clipboard/clipboard.min.js"></script>
+  <script src="../dist/js/gravity.min.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
