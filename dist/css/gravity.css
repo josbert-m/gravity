@@ -234,3 +234,25 @@
   70% {
     transform: scale(1) skew(-1deg);
     opacity: 1; } }
+
+@-webkit-keyframes appear {
+  0% {
+    transform: scale(0.9);
+    opacity: 0; }
+  100% {
+    transform: scale(1);
+    opacity: 1; }
+  74.6% {
+    transform: scale(1.05);
+    opacity: 1; } }
+
+@keyframes appear {
+  0% {
+    transform: scale(0.9);
+    opacity: 0; }
+  100% {
+    transform: scale(1);
+    opacity: 1; }
+  74.6% {
+    transform: scale(1.05);
+    opacity: 1; } }
