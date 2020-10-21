@@ -1,0 +1,16 @@
+{
+  "presets": [[
+   "@babel/env", {
+     "targets": {
+       "edge": "12",
+       "firefox": "16",
+       "chrome": "43",
+       "safari": "9",
+       "opera": "30"
+       },
+       "modules": "umd" 
+     }      
+  ]],
+
+  "plugins": ["babel-plugin-loop-optimizer"]
+}

@@ -1,0 +1,87 @@
+.gravity{
+    opacity: 0;
+}
+
+$to-center: ( 
+  "up" "0px, 70px" "0px, -10px", 
+  "right" "-70px, 0px" "10px, 0px",
+  "down" "0px, -70px" "0px, 10px",
+  "left" "70px, 0px" "-10px, 0px"
+);
+
+@each $name, $value in $to-center {
+  @keyframes #{$name} {
+    0%{
+      transform: translate(#{$value});
+      opacity: 0;
+    }
+    75%{
+      opacity: 1;
+    }
+    100%{
+      transform: translate(0,0);
+      opacity: 1;
+    }
+  }
+}
+
+@each $name, $initial, $middle in $to-center {
+  @keyframes #{$name}ward {
+    0%{
+      transform: translate(#{$initial});
+      opacity: 0;
+    }
+    75%{
+      transform: translate(#{$middle});
+      opacity: 1;
+    }
+    100%{
+      transform: translate(0,0);
+      opacity: 1;
+    }
+  }
+}
+
+@keyframes ghost{
+  0.0%{
+      transform: scale(.8) translate(0px, 50px ) skew(0deg);
+      opacity: 0;
+  }
+  100%{
+      transform: scale(1) translate(0px, 0px) skew(0deg);
+      opacity: 1;
+  }
+  64%{
+      transform: scale(1.025) translate(0px, -30px ) skew(0deg);
+      opacity: 1;
+  }
+}
+@keyframes arrow{
+  0.0%{
+    transform: scale(1) translate(-60px, 60px ) skew(0deg);
+    opacity: 0;
+  }
+  100%{
+    transform: scale(1) translate(0px ) skew(0deg);
+    opacity: 1;
+  }
+  70.0%{
+    transform: scale(1) translate(15px, -15px) skew(0deg);
+    opacity: 1;
+  }
+
+}
+@keyframes run{
+  0.0%{
+    transform: scale(1) translate(-70px) skew(-3deg);
+    opacity: 0;
+  }
+  100%{
+    transform: scale(1) translate(0px ) skew(0deg);
+    opacity: 1;
+  }
+  70%{
+    transform: scale(1) skew(-1deg);
+    opacity: 1;
+  }
+}
