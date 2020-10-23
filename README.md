@@ -9,7 +9,7 @@ via yarn: `yarn add gravity-library`
 
 ## Usage
 
-Add gravity.js, and gravity.js or another CSS animation library if you prefer
+Add gravity.js, and gravity.css or another CSS animation library if you prefer
 ```html
 <link rel="stylesheet" href="css/gravity.css">
 ...
