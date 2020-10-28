@@ -153,11 +153,8 @@
           var delay = item.dataset.gravityDelay ? item.dataset.gravityDelay : options.delay ? options.delay : 50;
 
           if (_this.inViewport(item).top > offset && _this.inViewport(item).bottom > offset) {
-            item.style.animationName = animation;
-            item.style.animationDuration = duration + 'ms';
-            item.style.animationDelay = delay + 'ms';
-            item.style.animationTimingFunction = 'linear';
-            item.style.animationFillMode = 'forwards';
+            item.style.animation = animation + ' ' + duration + 'ms' + ' ' + 'linear' + ' ' + delay + 'ms' + ' ' + 'forwards';
+            item.style.webkitAnimation = animation + ' ' + duration + 'ms' + ' ' + 'linear' + ' ' + delay + 'ms' + ' ' + 'forwards';
 
             if (_this.removeClass) {
               setTimeout(function () {
