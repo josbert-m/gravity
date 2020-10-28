@@ -6,7 +6,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const uglify = require('gulp-uglify');
 const cleanCSS = require('gulp-clean-css');
 
-const buidJS = () => src('./src/js/main.js').
+const buildJS = () => src('./src/js/main.js').
 pipe(babel()).
 pipe(rename({
   basename: 'gravity',
@@ -14,7 +14,7 @@ pipe(rename({
 })).
 pipe(dest('./dist/js'));
 
-const buidCSS = () => src('./src/scss/gravity.scss').
+const buildCSS = () => src('./src/scss/gravity.scss').
 pipe(sass()).
 pipe(autoprefixer()).
 pipe(dest('./dist/css'));
@@ -33,7 +33,7 @@ pipe(rename({
  })).
 pipe(dest('./dist/css'));
 
-exports.default = series(buidJS, buidCSS, compressJS, compressCSS);
-exports.buidJS = buidJS;
-exports.buidCSS = buidCSS;
+exports.default = series(buildJS, buildCSS, compressJS, compressCSS);
+exports.buildJS = buildJS;
+exports.buildCSS = buildCSS;
 exports.compress = series(compressJS, compressCSS);
